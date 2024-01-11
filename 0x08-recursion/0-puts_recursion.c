@@ -1,16 +1,33 @@
 #include "main.h"
 
+int actual_sqrt_recursion(int n, int i);
+
 /**
-* _puts_recursion - prints a string, followed by a new line
-* @s: string to print
+* _sqrt_recursion - returns the natural square root of a number
+* @n: number to calculate the square root of
+*
+* Return: the resulting square root
 */
-void _puts_recursion(char *s)
+int _sqrt_recursion(int n)
 {
-if (*s == '\0')
-{
-_putchar('\n');
-return;
+if (n < 0)
+return (-1);
+return (actual_sqrt_recursion(n, 0));
 }
-_putchar(*s);
-_puts_recursion(s + 1);
+
+/**
+* actual_sqrt_recursion - recurses to find the natural
+* square root of a number
+* @n: number to calculate the sqaure root of
+* @i: iterator
+*
+* Return: the resulting square root
+*/
+int actual_sqrt_recursion(int n, int i)
+{
+if (i * i > n)
+return (-1);
+if (i * i == n)
+return (i);
+return (actual_sqrt_recursion(n, i + 1));
 }
