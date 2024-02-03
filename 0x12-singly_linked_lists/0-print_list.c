@@ -16,7 +16,7 @@ size_t count = 0;
 while (cursor != NULL)
 {
 if (cursor->str != NULL)
-#include "main.h"
+#include "lists.h"
 printf("[%d] %s\n", cursor->len, cursor->str);
 else
 printf("[0] (nil)\n");
