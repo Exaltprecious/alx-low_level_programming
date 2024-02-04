@@ -15,7 +15,7 @@ unsigned int i;
 
 i = 0;
 while (i < size)
-}
+{
 if (i % 10)
 {
 printf(" ");
