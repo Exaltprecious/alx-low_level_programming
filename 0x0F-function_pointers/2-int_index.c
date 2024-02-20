@@ -19,7 +19,7 @@ if (array && cmp)
 for (i = 0; i < size; i++)
 			         {
 if (cmp(array[i]) != 0)
-                                rreturn (i);
+                                return (i);
 }
 }
 
