@@ -15,7 +15,7 @@ unsigned int binary_to_uint(const char *b)
 	len = _strlen(b);
 	while (len--)
 	{
-if (b[len] != 48 && b[len] != 49)
+		if (b[len] != 48 && b[len] != 49)
 			return (0);
 		if (b[len] == 49)
 			sum += 1 << count;
@@ -30,9 +30,9 @@ if (b[len] != 48 && b[len] != 49)
  */
 int _strlen(const char *s)
 {
-int c = 0;
+	int c = 0;
 
 	while (s[c])
 		c++;
-	return (c);		
-}
+	return (c);
+}}
