@@ -10,12 +10,12 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *post_node;
 
 	while (head && *head)
-	{
-		post_node = (*head)->next;
-		(*head)->next = old_node;
+post_node = (*head)->next;
+
+	(*head)->next = old_node;
 		old_node = *head;
 		*head = post_node;
 	}
 	*head = old_node;
-	return (*head); 
+	return (*head);
 }
